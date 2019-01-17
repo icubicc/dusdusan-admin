@@ -1,0 +1,222 @@
+<!-- @import variables -->
+<!-- $admin-toggle-items-admin: toggled -->
+<!-- $admin-nav-admin-user: link is-current -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="site-content-inner">
+					<div class="main-content" role="main">
+						<div class="admin-page-container">
+							<header class="admin-page-header">
+								<div class="page-breadcrumb">
+									<p class="breadcrumb"><span class="parent">Admin Area</span> /  <span class="current">Pengguna</span></p>
+								</div>
+								<div class="avatar-nav">
+									<div class="avatar-nav-link">
+										<a href="#avatar-nav-menu" class="link js-toggle"><span class="initial">AD</span></a>
+									</div>
+									<div id="avatar-nav-menu" class="avatar-nav-menu">
+										<ul class="items">
+											<li class="item">
+												<a class="link" href="user-account.html">Account</a>
+											</li>
+											<li class="item">
+												<a class="link" href="user-login.html">Logout</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</header>
+							<div class="admin-page-content">
+								<section class="section">
+									<h1 class="page-title">Pengguna</h1>
+									<div class="admin-table">
+										<div class="admin-table-head">
+											<div class="admin-table-action">
+												<a href="#" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
+											</div>
+											<div class="admin-table-search">
+												<div class="search-bar">
+													<input type="text" class="input" placeholder="Nama, Email">
+													<button class="button button-gray">Cari</button>
+												</div>
+											</div>
+										</div>
+										<div class="admin-table-body">
+											<table class="table">
+												<thead>
+													<tr>
+														<th class="th is-sortable is-active">Nama</th>
+														<th class="th is-sortable">Email</th>
+														<th class="th is-sortable">Sumbangan</th>
+														<th class="th is-sortable">Permohonan</th>
+														<th class="th is-sortable">Role</th>
+														<th class="th"></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="strong"><a href="admin-user-single.html">Andy Kusuma</a></td>
+														<td>andy.kusuma@gmail.com</td>
+														<td>20</td>
+														<td>2</td>
+														<td>User</td>
+														<td class="action">
+															<a class="more js-toggle" href="#ur001">Action</a>
+															<div id="ur001" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Detail</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Hapus</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="strong"><a href="#">Kenneth Benson</a></td>
+														<td>k.benson@gmail.com</td>
+														<td>2</td>
+														<td>0</td>
+														<td>Admin</td>
+														<td class="action">
+															<a class="more js-toggle" href="#ur002">Action</a>
+															<div id="ur002" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Detail</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Hapus</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="strong"><a href="#">Janet Piser</a></td>
+														<td>janetjanet@yahoo.com</td>
+														<td>2</td>
+														<td>1</td>
+														<td>Verifikator</td>
+														<td class="action">
+															<a class="more js-toggle" href="#ur003">Action</a>
+															<div id="ur003" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Detail</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Hapus</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="strong"><a href="#">Teresa Mila</a></td>
+														<td>tmila@gmail.com</td>
+														<td>2</td>
+														<td>0</td>
+														<td>User</td>
+														<td class="action">
+															<a class="more js-toggle" href="#ur004">Action</a>
+															<div id="ur004" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Detail</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Hapus</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr class="fail">
+														<td class="strong"><a href="#">Elisa Harian</a></td>
+														<td>elisah2@gmail.com</td>
+														<td>0</td>
+														<td>2</td>
+														<td>Banned</td>
+														<td class="action">
+															<a class="more js-toggle" href="#ur005">Action</a>
+															<div id="ur005" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Detail</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Hapus</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="strong"><a href="#">Elisa Harian</a></td>
+														<td>elisah@gmail.com</td>
+														<td>0</td>
+														<td>1</td>
+														<td>User</td>
+														<td class="action">
+															<a class="more js-toggle" href="#ur006">Action</a>
+															<div id="ur006" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Detail</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Hapus</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="admin-table-foot">
+											<div class="page-navigation">
+												<div class="page-navigation-record">
+													<p class="count"><span class="value">6</span> records</p>
+												</div>
+												<div class="page-navigation-list">
+													<p class="count"><span class="value">1043</span> pages</p>
+													<ul class="items">
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-left" /></svg></a>
+														</li>
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-left" /></svg></a>
+														</li>
+														<li class="item">
+															<input class="input" type="text" value="1">
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-right" /></svg></a>
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-right" /></svg></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+							<footer class="admin-page-footer">
+								<p class="attribution">Developed by <a href="http://icubic.co.id" class="link">ICUBIC</a></p>
+							</footer>
+						</div>
+					</div>
+
+					<!-- @import sidebar -->
+
+				</div>
+			</div>
+
+<!-- @import footer -->
