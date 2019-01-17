@@ -63,6 +63,11 @@
 					}
 				}
 
+				&.link-disable {
+					color: $color-text-lighter;
+					pointer-events: none;
+				}
+
 				&:hover,
 				&:focus {
 					color: $color-one-500;

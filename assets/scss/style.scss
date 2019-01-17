@@ -13,6 +13,8 @@ Tags: responsive-layout, mobile-first
 // variables
 @import "variables";
 @import "mixins";
+@import "fontface";
+@import "keyframes";
 
 // plugins
 @import "plugins/normalize";
@@ -28,7 +30,6 @@ Tags: responsive-layout, mobile-first
 @import "reset";
 @import "global";
 @import "modifier";
-@import "keyframes";
 
 // containers
 @import "site";
@@ -42,6 +43,7 @@ Tags: responsive-layout, mobile-first
 @import "menu";
 @import "page";
 @import "popup";
+@import "proposal";
 @import "search";
 @import "stat";
 @import "table";
