@@ -1,6 +1,6 @@
 <!-- @import variables -->
-<!-- $admin-toggle-items-admin: toggled -->
-<!-- $admin-nav-admin-product: link is-current -->
+<!-- $admin-toggle-items-production: toggled -->
+<!-- $admin-nav-production-delivery: link is-current -->
 <!-- @import header -->
 
 			<div id="site-content" class="site-content">
@@ -9,7 +9,7 @@
 						<div class="admin-page-container">
 							<header class="admin-page-header">
 								<div class="page-breadcrumb">
-									<p class="breadcrumb"><span class="parent">Admin Area</span> /  <span class="current">Produk Bantuan</span></p>
+									<p class="breadcrumb"><span class="parent">Production</span> / <span class="current">Delivery Order</span></p>
 								</div>
 								<div class="avatar-nav">
 									<div class="avatar-nav-link">
@@ -29,16 +29,41 @@
 							</header>
 							<div class="admin-page-content">
 								<section class="section">
-									<h1 class="page-title">Produk Bantuan</h1>
+									<h1 class="page-title">Delivery Order</h1>
 									<div class="admin-table">
 										<div class="admin-table-head">
 											<div class="admin-table-action">
-												<a href="#" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
+												<a href="production-delivery-new.html" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
 											</div>
 											<div class="admin-table-search">
 												<div class="search-bar">
-													<input type="text" class="input" placeholder="ID, Nama">
-													<button class="button button-gray">Cari</button>
+													<div class="search-bar-filter">
+														<a href="#input-search-filter" class="toggle js-toggle" data-toggle-area="#input-search-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></a>
+														<ul id="input-search-filter" class="items">
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input" checked> Search All</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> PO Number</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> DO Number</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Delivery Location</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Product</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> SKU</label>
+															</li>
+														</ul>
+													</div>
+													<div class="search-bar-form">
+														<input type="text" class="input" placeholder="Keyword">
+														<button class="button button-gray">Search</button>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -46,70 +71,42 @@
 											<table class="table">
 												<thead>
 													<tr>
-														<th class="th is-sortable is-active is-asc">ID</th>
-														<th class="th is-sortable">Nama</th>
-														<th class="th is-sortable">Stok Global</th>
-														<th class="th is-sortable">Pemohon</th>
-														<th class="th"></th>
+														<th class="th is-sortable is-active is-desc">PO Number</th>
+														<th class="th is-sortable">DO Number</th>
+														<th class="th">Delivery Location</th>
+														<th class="th is-sortable">Product</th>
+														<th class="th is-sortable">SKU</th>
+														<th class="th is-sortable">Qty</th>
+														<th class="th is-sortable">Delivery Date</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
-														<td class="strong">#PB001</td>
-														<td><a href="admin-product-single.html">Kursi Roda</a></td>
-														<td>18</td>
-														<td>6</td>
-														<td class="action">
-															<a class="more js-toggle" href="#pb001">Action</a>
-															<div id="pb001" class="menu-popover">
-																<ul class="menu-popover-items">
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Edit</a>
-																	</li>
-																	<li class="menu-popover-item">
-																		<a href="#" class="link link-delete">Hapus</a>
-																	</li>
-																</ul>
-															</div>
-														</td>
+														<td>A0001</td>
+														<td>B0001</td>
+														<td>Bekasi</td>
+														<td>Vienna Family Set</td>
+														<td>DDC/LF/18</td>
+														<td>100</td>
+														<td>10/10/2018</td>
 													</tr>
 													<tr>
-														<td class="strong">#PB002</td>
-														<td><a href="#">Kasur</a></td>
-														<td>17</td>
-														<td>9</td>
-														<td class="action">
-															<a class="more js-toggle" href="#pb002">Action</a>
-															<div id="pb002" class="menu-popover">
-																<ul class="menu-popover-items">
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Edit</a>
-																	</li>
-																	<li class="menu-popover-item">
-																		<a href="#" class="link link-delete">Hapus</a>
-																	</li>
-																</ul>
-															</div>
-														</td>
+														<td>A0002</td>
+														<td>B0002</td>
+														<td>Palmerah</td>
+														<td>Vienna Family Set</td>
+														<td>DDC/LF/19</td>
+														<td>500</td>
+														<td>11/10/2018</td>
 													</tr>
 													<tr>
-														<td class="strong">#PB003</td>
-														<td><a href="#">Tongkat Jalan</a></td>
-														<td class="alert">16</td>
-														<td>18</td>
-														<td class="action">
-															<a class="more js-toggle" href="#pb003">Action</a>
-															<div id="pb003" class="menu-popover">
-																<ul class="menu-popover-items">
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Edit</a>
-																	</li>
-																	<li class="menu-popover-item">
-																		<a href="#" class="link link-delete">Hapus</a>
-																	</li>
-																</ul>
-															</div>
-														</td>
+														<td>A0003</td>
+														<td>B0003</td>
+														<td>Sidoarjo</td>
+														<td>Vienna Family Set</td>
+														<td>DDC/LF/20</td>
+														<td>20</td>
+														<td>12/10/2018</td>
 													</tr>
 												</tbody>
 											</table>
@@ -117,7 +114,7 @@
 										<div class="admin-table-foot">
 											<div class="page-navigation">
 												<div class="page-navigation-record">
-													<p class="count"><span class="value">3</span> records</p>
+													<p class="count"><span class="value">4</span> records</p>
 												</div>
 												<div class="page-navigation-list">
 													<p class="count"><span class="value">1043</span> pages</p>

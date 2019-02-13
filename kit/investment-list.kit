@@ -37,8 +37,33 @@
 											</div>
 											<div class="admin-table-search">
 												<div class="search-bar">
-													<input type="text" class="input" placeholder="Keyword">
-													<button class="button button-gray">Search</button>
+													<div class="search-bar-filter">
+														<a href="#input-search-filter" class="toggle js-toggle" data-toggle-area="#input-search-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></a>
+														<ul id="input-search-filter" class="items">
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input" checked> Search All</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> ID</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Name</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Phone</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Email</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Location</label>
+															</li>
+														</ul>
+													</div>
+													<div class="search-bar-form">
+														<input type="text" class="input" placeholder="Keyword">
+														<button class="button button-gray">Search</button>
+													</div>
 												</div>
 											</div>
 										</div>

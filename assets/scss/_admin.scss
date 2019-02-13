@@ -58,6 +58,14 @@
 			margin-bottom: 24px;
 		}
 
+		.admin-table-legend {
+
+			.heading {
+				@include font-size-h3;
+				font-weight: 400;
+			}
+		}
+
 		.admin-table-search {
 			flex: 0 1 50%;
 			margin-left: auto;
@@ -69,6 +77,14 @@
 				@include font-size-200;
 				color: $color-text-light;
 				display: block;
+			}
+
+			.positive {
+				color: $color-success-600;
+			}
+
+			.negative {
+				color: $color-alert-600;
 			}
 
 			.fail {

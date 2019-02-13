@@ -1,6 +1,6 @@
 <!-- @import variables -->
-<!-- $admin-toggle-items-vendor: toggled -->
-<!-- $admin-nav-vendor-product: link is-current -->
+<!-- $admin-toggle-items-production: toggled -->
+<!-- $admin-nav-production-home: link is-current -->
 <!-- @import header -->
 
 			<div id="site-content" class="site-content">
@@ -9,7 +9,7 @@
 						<div class="admin-page-container">
 							<header class="admin-page-header">
 								<div class="page-breadcrumb">
-									<p class="breadcrumb"><span class="parent">Vendor</span> / <span class="current">Product Approval</span></p>
+									<p class="breadcrumb"><span class="parent">Production</span> / <span class="current">Production</span></p>
 								</div>
 								<div class="avatar-nav">
 									<div class="avatar-nav-link">
@@ -29,33 +29,16 @@
 							</header>
 							<div class="admin-page-content">
 								<section class="section">
-									<h1 class="page-title">Product Approval</h1>
+									<h1 class="page-title">Production</h1>
 									<div class="admin-table">
 										<div class="admin-table-head">
+											<div class="admin-table-action">
+												<a href="production-delivery-new.html" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
+											</div>
 											<div class="admin-table-search">
 												<div class="search-bar">
-													<div class="search-bar-filter">
-														<a href="#input-search-filter" class="toggle js-toggle" data-toggle-area="#input-search-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></a>
-														<ul id="input-search-filter" class="items">
-															<li class="item">
-																<label class="label"><input type="checkbox" class="input" checked> Search All</label>
-															</li>
-															<li class="item">
-																<label class="label"><input type="checkbox" class="input"> Proposal No.</label>
-															</li>
-															<li class="item">
-																<label class="label"><input type="checkbox" class="input"> Vendor Name</label>
-															</li>
-															<li class="item">
-																<label class="label"><input type="checkbox" class="input"> Product Name</label>
-															</li>
-															<li class="item">
-																<label class="label"><input type="checkbox" class="input"> Category</label>
-															</li>
-														</ul>
-													</div>
 													<div class="search-bar-form">
-														<input type="text" class="input" placeholder="Keyword">
+														<input type="text" class="input" placeholder="PO Number">
 														<button class="button button-gray">Search</button>
 													</div>
 												</div>
@@ -65,42 +48,27 @@
 											<table class="table">
 												<thead>
 													<tr>
-														<th class="th is-sortable is-active is-asc">Proposal No.</th>
-														<th class="th is-sortable">Vendor Name</th>
-														<th class="th">Product Name</th>
-														<th class="th">Category</th>
-														<th class="th">Price</th>
-														<th class="th">Weight</th>
-														<th class="th">Dimension</th>
+														<th class="th is-sortable is-active is-desc">PO Number</th>
+														<th class="th is-sortable">PO Date</th>
+														<th class="th is-sortable">Production Qty</th>
+														<th class="th is-sortable">Production Done</th>
+														<th class="th is-sortable">Status</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
-														<td><a href="vendor-proposal-single.html" title="Quick View">DOMS/OFL/2018/08/033 <svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-eye" /></svg></a></td>
-														<td>Technoplast</td>
-														<td>Gelas Decorative (Set of 3)</td>
-														<td>Bundling</td>
-														<td>Rp 150.000</td>
-														<td>600 gr</td>
-														<td>6&times;7&times;8 cm</td>
+														<td class="strong"><a href="#">Test0001</a></td>
+														<td>5/12/2018</td>
+														<td>3160</td>
+														<td>840 (26,58%)</td>
+														<td>Ongoing</td>
 													</tr>
 													<tr>
-														<td><a href="#" title="Quick View">DOMS/OFL/2018/08/034 <svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-eye" /></svg></a></td>
-														<td>Green Leaf</td>
-														<td>Adia Boys Play Lunch Set</td>
-														<td>Regular</td>
-														<td>Rp 150.000</td>
-														<td>800 gr</td>
-														<td>6&times;7&times;8 cm</td>
-													</tr>
-													<tr>
-														<td><a href="#" title="Quick View">DOMS/OFL/2018/08/035 <svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-eye" /></svg></a></td>
-														<td>Homeco</td>
-														<td>Early Grey Spatula (Set of 8)</td>
-														<td>Bundling</td>
-														<td>Rp 150.000</td>
-														<td>750 gr</td>
-														<td>6&times;7&times;8 cm</td>
+														<td class="strong"><a href="#">Test0002</a></td>
+														<td>5/12/2018</td>
+														<td>660</td>
+														<td>0 (0%)</td>
+														<td>Pending</td>
 													</tr>
 												</tbody>
 											</table>

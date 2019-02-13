@@ -2,6 +2,10 @@
 	border: 2px solid $color-border;
 	padding: 32px;
 
+	&:not(:last-child) {
+		margin-bottom: 32px;
+	}
+
 	@at-root {
 		.proposal-card-head {
 			@include font-size-400;
@@ -45,6 +49,10 @@
 			margin-bottom: 24px;
 		}
 
+		.proposal-card-bloc {
+			margin-top: 24px;
+		}
+
 		.proposal-card-foot {
 			margin-top: 32px;
 		}
@@ -60,6 +68,44 @@
 
 		.proposal-card-signature {
 			margin-top: 32px;
+		}
+	}
+}
+
+.proposal-negotiation {
+
+	@at-root {
+		.proposal-negotiation-chat {
+			background-color: $color-100;
+			border-radius: 8px;
+			box-shadow: $box-shadow-200;
+			clear: both;
+			padding: 16px;
+			width: 48%;
+
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+
+			&.proposal-negotiation-chat-me {
+				background-color: $color-success-200;
+				float: right;
+			}
+		}
+
+		.proposal-negotiation-input {
+			border-top: 1px solid $color-border;
+			margin-top: 32px;
+			padding-top: 32px;
+
+			.input {
+				width: 100%;
+			}
+
+			.submit {
+				margin-top: 12px;
+				text-align: right;
+			}
 		}
 	}
 }

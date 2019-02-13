@@ -505,7 +505,7 @@
 		const $formFile = document.querySelectorAll('.js-form-file');
 
 		$formFile.forEach(element => {
-			const $fileInput = element.querySelector('.form-file-input'),
+			const $fileInput = element.querySelector('.form-file-field'),
 				$input = $fileInput.querySelector('.input'),
 				$label = $fileInput.querySelector('.label'),
 				$remove = $fileInput.querySelector('.remove'),

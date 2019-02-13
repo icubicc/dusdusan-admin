@@ -33,12 +33,31 @@
 									<div class="admin-table">
 										<div class="admin-table-head">
 											<div class="admin-table-action">
-												<a href="#" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
+												<a href="vendor-proposal-new.html" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
 											</div>
 											<div class="admin-table-search">
 												<div class="search-bar">
-													<input type="text" class="input" placeholder="Keyword">
-													<button class="button button-gray">Search</button>
+													<div class="search-bar-filter">
+														<a href="#input-search-filter" class="toggle js-toggle" data-toggle-area="#input-search-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></a>
+														<ul id="input-search-filter" class="items">
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input" checked> Search All</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Vendor Name</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Proposal No.</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Vendor PIC</label>
+															</li>
+														</ul>
+													</div>
+													<div class="search-bar-form">
+														<input type="text" class="input" placeholder="Keyword">
+														<button class="button button-gray">Search</button>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -59,7 +78,7 @@
 													<tr>
 														<td class="strong">18/01/19</td>
 														<td>Technoplast</td>
-														<td><a href="vendor-proposal-single.html">DOMS/OFL/2018/08/033</a></td>
+														<td><a href="vendor-proposal-single.html" title="Quick View">DOMS/OFL/2018/08/033 <svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-eye" /></svg></a></td>
 														<td>techno@plaset.com</td>
 														<td>Budi</td>
 														<td>New</td>
@@ -83,7 +102,7 @@
 													<tr>
 														<td class="strong">16/01/19</td>
 														<td>Green Leaf</td>
-														<td><a href="#">DOMS/OFL/2018/08/034</a></td>
+														<td><a href="#" title="Quick View">DOMS/OFL/2018/08/034 <svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-eye" /></svg></a></td>
 														<td>green@leaf.me</td>
 														<td>Mirna</td>
 														<td>Checked</td>
@@ -107,22 +126,16 @@
 													<tr>
 														<td class="strong">10/01/19</td>
 														<td>Homeco</td>
-														<td><a href="#">DOMS/OFL/2018/08/035</a></td>
+														<td><a href="#" title="Quick View">DOMS/OFL/2018/08/035 <svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-eye" /></svg></a></td>
 														<td>hmc@gmail.com</td>
 														<td>Taki</td>
-														<td>Negotiating</td>
+														<td>Approved</td>
 														<td class="action">
 															<a class="more js-toggle" href="#vd003">Action</a>
 															<div id="vd003" class="menu-popover">
 																<ul class="menu-popover-items">
 																	<li class="menu-popover-item">
 																		<a href="#" class="link">View</a>
-																	</li>
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Negotiate</a>
-																	</li>
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Finalize</a>
 																	</li>
 																</ul>
 															</div>
@@ -131,10 +144,10 @@
 													<tr>
 														<td class="strong">10/01/19</td>
 														<td>Supra</td>
-														<td><a href="#">DOMS/OFL/2018/08/036</a></td>
+														<td><a href="#" title="Quick View">DOMS/OFL/2018/08/036 <svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-eye" /></svg></a></td>
 														<td>supra@yahoo.com</td>
 														<td>Anton</td>
-														<td>Finalized</td>
+														<td>2 Approved <small class="small">1 rejected</small></td>
 														<td class="action">
 															<a class="more js-toggle" href="#vd004">Action</a>
 															<div id="vd004" class="menu-popover">

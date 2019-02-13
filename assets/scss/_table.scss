@@ -64,6 +64,13 @@
 		width: 100%;
 	}
 
+	.link {
+
+		&.link-review {
+			color: $color-text-light;
+		}
+	}
+
 	.shrink {
 		text-align: right;
 		white-space: nowrap;
@@ -74,6 +81,31 @@
 		background-color: $color-alert-400;
 		display: block;
 		height: 16px;
+	}
+
+	.row {
+		align-items: center;
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+
+		.label {
+			flex: 1 1 0;
+			font-weight: 700;
+
+			.input {
+				width: 60px;
+			}
+		}
+
+		.input {
+			padding-bottom: 4px;
+			padding-top: 4px;
+			text-align: right;
+			width: 120px;
+		}
 	}
 }
 

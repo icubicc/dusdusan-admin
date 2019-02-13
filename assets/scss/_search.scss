@@ -1,35 +1,96 @@
 .search-bar {
-	display: flex;
+	position: relative;
 
-	&:hover {
+	@at-root {
+		.search-bar-filter {
+			left: 0;
+			position: absolute;
+			top: 1px;
 
-		.input {
-			border-color: $color-one-500;
-		}
+			+ .search-bar-form {
 
-		.button {
-			background-color: $color-one-500;
-			color: $white;
-		}
-	}
+				.input {
+					padding-left: 56px;
+				}
+			}
 
-	.input {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-		flex: 1 1 0;
+			.toggle {
+				color: $color-text;
+				display: block;
+				position: relative;
+				height: 40px;
+				width: 52px;
 
-		&:focus {
+				&:before {
+					content: "";
+					background-color: $color-text-light;
+					mask-image: url(../images/symbols/icon-caret-down.svg);
+					mask-repeat: no-repeat;
+					mask-position: right center;
+					height: 40px;
+					position: absolute;
+					right: 0;
+					width: 40px;
+				}
 
+				.icon {
+					height: 40px;
+					padding: 6px;
+					width: 40px;
+				}
+			}
 
-			+ .button {
-				background-color: $color-one-500;
-				color: $white;
+			.items {
+				@include font-size-400;
+				background-color: $white;
+				border: 1px solid $color-border;
+				box-shadow: $box-shadow-300;
+				display: none;
+				padding: 8px;
+			}
+
+			.item {
+
+				&:not(:last-child) {
+					margin-bottom: 4px;
+				}
 			}
 		}
-	}
 
-	.button {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
+		.search-bar-form {
+			display: flex;
+
+			&:hover {
+
+				.input {
+					border-color: $color-one-500;
+				}
+
+				.button {
+					background-color: $color-one-500;
+					color: $white;
+				}
+			}
+
+			.input {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				flex: 1 1 0;
+
+				&:focus {
+
+
+					+ .button {
+						background-color: $color-one-500;
+						color: $white;
+					}
+				}
+			}
+
+			.button {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
 	}
 }

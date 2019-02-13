@@ -33,12 +33,34 @@
 									<div class="admin-table">
 										<div class="admin-table-head">
 											<div class="admin-table-action">
-												<a href="#" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
+												<a href="investment-release-new.html" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
 											</div>
 											<div class="admin-table-search">
 												<div class="search-bar">
-													<input type="text" class="input" placeholder="Keyword">
-													<button class="button button-gray">Search</button>
+													<div class="search-bar-filter">
+														<a href="#input-search-filter" class="toggle js-toggle" data-toggle-area="#input-search-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></a>
+														<ul id="input-search-filter" class="items">
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input" checked> Search All</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> ID</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Product</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Investor Name</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Contract No.</label>
+															</li>
+														</ul>
+													</div>
+													<div class="search-bar-form">
+														<input type="text" class="input" placeholder="Keyword">
+														<button class="button button-gray">Search</button>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -52,7 +74,7 @@
 														<th class="th">Investor Name</th>
 														<th class="th">Period</th>
 														<th class="th">Contract No.</th>
-														<th class="th">Status</th>
+														<th class="th"></th>
 													</tr>
 												</thead>
 												<tbody>
@@ -63,7 +85,22 @@
 														<td>Budi</td>
 														<td>3 months</td>
 														<td>#B0001</td>
-														<td></td>
+														<td class="action">
+															<a class="more js-toggle" href="#b0001">Action</a>
+															<div id="b0001" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">On</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Off</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Print Contract</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
 													</tr>
 													<tr>
 														<td class="strong">#A0001</td>
@@ -72,7 +109,22 @@
 														<td>PT. Gumilang</td>
 														<td>5 months</td>
 														<td>#B0002</td>
-														<td></td>
+														<td class="action">
+															<a class="more js-toggle" href="#b0002">Action</a>
+															<div id="b0002" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">On</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Off</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Print Contract</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
 													</tr>
 													<tr>
 														<td class="strong">#A0001</td>
@@ -81,7 +133,22 @@
 														<td>Sari</td>
 														<td>12 months</td>
 														<td>#B0003</td>
-														<td></td>
+														<td class="action">
+															<a class="more js-toggle" href="#b0003">Action</a>
+															<div id="b0003" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">On</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Off</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Print Contract</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
 													</tr>
 												</tbody>
 											</table>
