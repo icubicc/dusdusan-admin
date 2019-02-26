@@ -1,54 +1,24 @@
-.popup-container {
-	bottom: 0;
-	display: none;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 99;
-
-	&:before {
-		content: "";
-		background-color: rgba($color-200, 0.8);
-		bottom: 0;
-		left: 0;
-		position: fixed;
-		right: 0;
-		top: 0;
-		z-index: -1;
-	}
-
-	@at-root {
-		.popup-container-content {
-			align-items: center;
-			bottom: 0;
-			display: flex;
-			flex-direction: column;
-			left: 0;
-			right: 0;
-			padding: 16px;
-			position: absolute;
-			top: 48px;
-
-			.section {
-				background-color: $white;
-				padding: 24px;
-			}
-		}
-	}
-}
-
 .popup-inline {
 	background-color: $white;
 	border: 1px solid $color-border;
 	border-radius: 3px;
 	box-shadow: $box-shadow-500;
-	max-width: 640px;
-	position: fixed;
+	margin: 16px auto;
+	max-width: 800px;
+	position: relative;
+	width: 100%;
 	z-index: 9;
+
+	&.popup-inline-small {
+		max-width: 640px;
+	}
 
 	@at-root {
 		.popup-inline-head {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: -16px;
 			padding: 40px 40px 0;
 			position: relative;
 
@@ -58,21 +28,17 @@
 				margin-bottom: 0;
 			}
 
-			.close {
-				color: $color-400;
-				position: absolute;
-				right: 16px;
-				top: 16px;
+			.search {
 
-				.icon {
-					height: 24px;
-					width: 24px;
-				}
 			}
 		}
 
 		.popup-inline-body {
 			padding: 40px;
+		}
+
+		.popup-inline-foot {
+			padding: 0 40px 40px;
 		}
 	}
 }

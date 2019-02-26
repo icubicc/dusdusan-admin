@@ -7,8 +7,21 @@
 	z-index: 1042;
 	overflow: hidden;
 	position: fixed;
-	background: #0b0b0b;
+	background: $black;
 	opacity: 0.8;
+
+	&.mfp-animation {
+		opacity: 0;
+		transition: all 0.2s ease-out;
+
+		&.mfp-ready {
+			opacity: 0.8;
+		}
+
+		&.mfp-removing {
+			opacity: 0;
+		}
+	}
 }
 
 .mfp-wrap {
@@ -29,7 +42,7 @@
 	height: 100%;
 	left: 0;
 	top: 0;
-	padding: 0 8px;
+	padding: 0 16px;
 	box-sizing: border-box;
 }
 
@@ -38,6 +51,31 @@
 	display: inline-block;
 	height: 100%;
 	vertical-align: middle;
+}
+
+.mfp-animation {
+
+	.mfp-content {
+		opacity: 0;
+		transition: all 0.2s ease-out;
+		transform: scale(0.8);
+	}
+
+	&.mfp-ready {
+
+		.mfp-content {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	&.mfp-removing {
+
+		.mfp-content {
+			opacity: 0;
+			transform: scale(0.8);
+		}
+	}
 }
 
 .mfp-align-top .mfp-container:before {
@@ -126,8 +164,8 @@
 	display: none;
 }
 
-button.mfp-arrow,
-button.mfp-close {
+.mfp-arrow,
+.mfp-close {
 	overflow: visible;
 	cursor: pointer;
 	background: transparent;
@@ -147,33 +185,28 @@ button::-moz-focus-inner {
 }
 
 .mfp-close {
-	width: 44px;
-	height: 44px;
-	line-height: 44px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 2px currentColor inset;
+	color: $color-400;
+	font-style: normal;
+	font-size: 24px;
+	font-family: Arial, Baskerville, monospace;
+	height: 24px;
+	line-height: 1;
+	opacity: 1;
+	padding: 0;
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: 12px;
 	text-decoration: none;
 	text-align: center;
-	opacity: 0.65;
-	padding: 0 0 18px 10px;
-	color: #FFF;
-	font-style: normal;
-	font-size: 28px;
-	font-family: Arial, Baskerville, monospace;
-}
+	top: 12px;
+	transition: all 0.2s ease-out;
+	width: 24px;
 
-.mfp-close:focus,
-.mfp-close:hover {
-	opacity: 1;
-}
-
-.mfp-close:active {
-	top: 1px;
-}
-
-.mfp-close-btn-in .mfp-close {
-	color: #333;
+	&:hover,
+	&:focus {
+		color: $color-alert-500;
+	}
 }
 
 .mfp-iframe-holder .mfp-close,

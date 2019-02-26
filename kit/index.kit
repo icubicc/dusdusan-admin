@@ -39,16 +39,6 @@
 										<div class="stat-grid-items">
 											<div class="stat-grid-item">
 												<div class="stat-grid-meta">
-													<p class="row label">Total Consignment</p>
-													<p class="row date">January 2019</p>
-													<p class="row value">Rp 95.870.000</p>
-												</div>
-												<div class="stat-grid-summary">
-													<p class="row negative"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-trending-down" /></svg> 1% decrease <span class="value">(- Rp 1.000.000)</span></p>
-												</div>
-											</div>
-											<div class="stat-grid-item">
-												<div class="stat-grid-meta">
 													<p class="row label">Total Investment</p>
 													<p class="row date">January 2019</p>
 													<p class="row value">Rp 95.870.000</p>
@@ -86,17 +76,40 @@
 											<div class="admin-table-legend">
 												<h2 class="heading">Investor Summary</h2>
 											</div>
+											<div class="admin-table-search">
+												<div class="search-bar">
+													<div class="search-bar-form">
+														<input type="text" class="input" placeholder="Search by Product/Investor">
+														<button class="button button-gray">Search</button>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="admin-table-body">
 											<table class="table">
 												<thead>
 													<tr>
 														<th class="th">Product</th>
-														<th class="th">Launching</th>
+														<th class="th">Date</th>
 														<th class="th">Investor</th>
 														<th class="th">Budget</th>
-														<th class="th">Investment</th>
-														<th class="th">Status</th>
+														<th class="th">
+															Status
+															<div class="table-filter">
+																<a href="#input-table-filter" class="table-filter-toggle js-toggle" data-toggle-area="#input-table-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-filter" /></svg></a>
+																<ul id="input-table-filter" class="table-filter-list">
+																	<li class="filter">
+																		<label class="label"><input type="checkbox" class="input" checked> Show All</label>
+																	</li>
+																	<li class="filter">
+																		<label class="label"><input type="checkbox" class="input"> Lunas</label>
+																	</li>
+																	<li class="filter">
+																		<label class="label"><input type="checkbox" class="input"> Belum Lunas</label>
+																	</li>
+																</ul>
+															</div>
+														</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -105,27 +118,51 @@
 														<td>17/10/2018</td>
 														<td>Norman</td>
 														<td>Rp 46.700.000</td>
-														<td>Early</td>
-														<td>Action</td>
+														<td>Lunas</td>
 													</tr>
 													<tr>
 														<td>Medina</td>
 														<td>2/1/2018</td>
 														<td>Joseph</td>
 														<td>Rp 58.500.000</td>
-														<td>Paid</td>
-														<td>Action</td>
+														<td>Lunas</td>
 													</tr>
 													<tr>
 														<td>Rak Piring Josei</td>
 														<td>1/4/2018</td>
 														<td>PT. Dummy</td>
 														<td>Rp 40.000.000</td>
-														<td>Early</td>
-														<td>Waiting for Client</td>
+														<td>Belum Lunas</td>
 													</tr>
 												</tbody>
 											</table>
+										</div>
+										<div class="admin-table-foot">
+											<div class="page-navigation">
+												<div class="page-navigation-record">
+													<p class="count"><span class="value">4</span> records</p>
+												</div>
+												<div class="page-navigation-list">
+													<p class="count"><span class="value">1043</span> pages</p>
+													<ul class="items">
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-left" /></svg></a>
+														</li>
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-left" /></svg></a>
+														</li>
+														<li class="item">
+															<input class="input" type="text" value="1">
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-right" /></svg></a>
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-right" /></svg></a>
+														</li>
+													</ul>
+												</div>
+											</div>
 										</div>
 									</div>
 								</section>
@@ -138,7 +175,7 @@
 											<div class="admin-table-search">
 												<div class="search-bar">
 													<div class="search-bar-form">
-														<input type="text" class="input" placeholder="Keyword">
+														<input type="text" class="input" placeholder="Search by Product">
 														<button class="button button-gray">Search</button>
 													</div>
 												</div>
@@ -163,7 +200,7 @@
 														<td>21/10/2018</td>
 														<td>100</td>
 														<td>Rp 1.000.000</td>
-														<td>Waiting for payment</td>
+														<td>Sudah Diterima</td>
 													</tr>
 													<tr>
 														<td>Smart Mom</td>
@@ -171,10 +208,37 @@
 														<td>21/10/2018</td>
 														<td>200</td>
 														<td>Rp 2.000.000</td>
-														<td>Waiting for payment</td>
+														<td>Telah Diambil</td>
 													</tr>
 												</tbody>
 											</table>
+										</div>
+										<div class="admin-table-foot">
+											<div class="page-navigation">
+												<div class="page-navigation-record">
+													<p class="count"><span class="value">4</span> records</p>
+												</div>
+												<div class="page-navigation-list">
+													<p class="count"><span class="value">1043</span> pages</p>
+													<ul class="items">
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-left" /></svg></a>
+														</li>
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-left" /></svg></a>
+														</li>
+														<li class="item">
+															<input class="input" type="text" value="1">
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-right" /></svg></a>
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-right" /></svg></a>
+														</li>
+													</ul>
+												</div>
+											</div>
 										</div>
 									</div>
 								</section>

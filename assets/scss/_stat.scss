@@ -2,7 +2,7 @@
 
 	@at-root {
 		.stat-grid-items {
-			@include column-items(2, 12px);
+			@include column-items(3, 12px);
 		}
 
 		.stat-grid-item {

@@ -107,6 +107,49 @@
 			width: 120px;
 		}
 	}
+
+	.small {
+		@include font-size-100;
+		color: $color-text-light;
+		display: block;
+	}
+
+	.positive {
+		color: $color-success-600;
+	}
+
+	.negative {
+		color: $color-alert-600;
+	}
+
+	.fail {
+		color: $color-text-light;
+	}
+
+	.action {
+		position: relative;
+	}
+
+	.more {
+		display: block;
+		padding-right: 18px;
+		position: relative;
+		text-align: right;
+
+		&:before {
+			content: "";
+			background-color: currentColor;
+			height: 100%;
+			mask-image: url(../images/symbols/icon-chevron-down.svg);
+			mask-repeat: no-repeat;
+			mask-position: right center;
+			mask-size: contain;
+			right: 0;
+			position: absolute;
+			top: 0;
+			width: 16px;
+		}
+	}
 }
 
 .table-responsive {

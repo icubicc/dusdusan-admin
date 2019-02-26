@@ -14,3 +14,26 @@ if ($choice.length) {
 		}
 	});
 }
+
+jQuery(document).ready(function($) {
+
+	// initialize magnificPopup
+	$('.js-popup-inline').magnificPopup({
+		type: 'inline',
+		mainClass: 'mfp-animation',
+		removalDelay: 200
+	});
+
+	$('.js-popup-modal').magnificPopup({
+		type: 'inline',
+		mainClass: 'mfp-animation',
+		modal: true,
+		removalDelay: 200
+	});
+
+	$(document).on('click', '.js-popup-close', function (event) {
+		event.preventDefault();
+		$.magnificPopup.close();
+	});
+
+});

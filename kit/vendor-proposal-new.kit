@@ -156,119 +156,250 @@
 											</div>
 										</div>
 									</fieldset>
-									<fieldset class="form-fieldset">
-										<legend class="form-fieldset-legend">Add Product</legend>
-										<div class="form-fieldset-body">
-											<div class="form-group">
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-type" class="form-input-heading">Type of Product</label>
-														<div class="form-input-select form-input-field">
-															<select name="input-product-type" id="input-product-type" class="input">
-																<option>Regular</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-category" class="form-input-heading">Category</label>
-														<div class="form-input-select form-input-field">
-															<select name="input-product-category" id="input-product-type" class="input">
-																<option selected disabled>Pilih Kategori</option>
-															</select>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-name" class="form-input-heading">Name</label>
-														<div class="form-input-field">
-															<input type="text" id="input-product-name" class="input">
-														</div>
-													</div>
-												</div>
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-code" class="form-input-heading">Code</label>
-														<div class="form-input-field">
-															<input type="text" id="input-product-code" class="input">
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-dimension" class="form-input-heading">Dimension (L&times;W&times;H in cm)</label>
-														<div class="form-input-fields">
-															<div class="form-input-field">
-																<input type="text" id="input-product-dimension-length" class="input" placeholder="Length">
+									<fieldset class="form-repeater js-form-repeater" data-repeater-max="5">
+										<legend class="legend">Product(s)</legend>
+										<table class="table">
+											<thead>
+												<tr>
+													<th class="th" width="48px"></th>
+													<th class="th">Product Detail</th>
+													<th class="th"><a href="#" class="form-repeater-add button" title="Add Row">+</a></th>
+												</tr>
+											</thead>
+											<tbody class="repeaters">
+												<tr class="repeater repeater-source">
+													<td class="handle"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-handle" /></svg></td>
+													<td>
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-type" class="form-input-heading">Type of Product</label>
+																	<div class="form-input-select form-input-field">
+																		<select name="input-product-type" id="input-product-type" class="input">
+																			<option>Regular</option>
+																		</select>
+																	</div>
+																</div>
 															</div>
-															<div class="form-input-field">
-																<input type="text" id="input-product-dimension-width" class="input" placeholder="Width">
-															</div>
-															<div class="form-input-field">
-																<input type="text" id="input-product-dimension-height" class="input" placeholder="Height">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-category" class="form-input-heading">Category</label>
+																	<div class="form-input-select form-input-field">
+																		<select name="input-product-category" id="input-product-type" class="input">
+																			<option selected disabled>Pilih Kategori</option>
+																		</select>
+																	</div>
+																</div>
 															</div>
 														</div>
-													</div>
-												</div>
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-weight" class="form-input-heading">Weight (gram)</label>
-														<div class="form-input-field">
-															<input type="text" id="input-product-weight" class="input">
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-name" class="form-input-heading">Name</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-name" class="input">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-code" class="form-input-heading">Code</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-code" class="input">
+																	</div>
+																</div>
+															</div>
 														</div>
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-price-sell" class="form-input-heading">Harga Jual</label>
-														<div class="form-input-field">
-															<input type="text" id="input-product-price-sell" class="input">
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-dimension" class="form-input-heading">Dimension (L&times;W&times;H in cm)</label>
+																	<div class="form-input-fields">
+																		<div class="form-input-field">
+																			<input type="text" id="input-product-dimension-length" class="input" placeholder="Length">
+																		</div>
+																		<div class="form-input-field">
+																			<input type="text" id="input-product-dimension-width" class="input" placeholder="Width">
+																		</div>
+																		<div class="form-input-field">
+																			<input type="text" id="input-product-dimension-height" class="input" placeholder="Height">
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-weight" class="form-input-heading">Weight (gram)</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-weight" class="input">
+																	</div>
+																</div>
+															</div>
 														</div>
-													</div>
-												</div>
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-price-retail" class="form-input-heading">Harga Retail</label>
-														<div class="form-input-field">
-															<input type="text" id="input-product-price-retail" class="input">
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-price-sell" class="form-input-heading">Harga Jual</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-price-sell" class="input">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-price-retail" class="form-input-heading">Harga Retail</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-price-retail" class="input">
+																	</div>
+																</div>
+															</div>
 														</div>
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<div class="form-group-item">
-													<div class="form-input js-form-input">
-														<label for="input-product-moq" class="form-input-heading">Material of Quantity (MOQ)</label>
-														<div class="form-input-field">
-															<input type="text" id="input-product-moq" class="input">
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-moq" class="form-input-heading">Material of Quantity (MOQ)</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-moq" class="input">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-file js-form-file">
+																	<label for="input-product-los" class="form-file-heading">Letter of Support (LOS)</label>
+																	<div class="form-file-field">
+																		<input type="file" name="input-product-los" id="input-product-los" class="input" data-multiple-placeholder="{count} files selected" multiple>
+																		<label for="input-product-los" class="label"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
+																	</div>
+																</div>
+															</div>
 														</div>
-													</div>
-												</div>
-												<div class="form-group-item">
-													<div class="form-file js-form-file">
-														<label for="input-product-los" class="form-file-heading">Letter of Support (LOS)</label>
-														<div class="form-file-field">
-															<input type="file" name="input-product-los" id="input-product-los" class="input" data-multiple-placeholder="{count} files selected" multiple>
-															<label for="input-product-los" class="label"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
+														<div class="form-image">
+															<label class="form-image-heading">Product Picture</label>
+															<div class="form-image-field">
+																<a href="#" class="link link-media"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-camera-add" /></svg> Upload</a>
+															</div>
 														</div>
-													</div>
-												</div>
-											</div>
-											<div class="form-image">
-												<label class="form-image-heading">Product Picture</label>
-												<div class="form-image-field">
-													<a href="#" class="link link-media"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-camera-add" /></svg> Upload</a>
-												</div>
-											</div>
-										</div>
+													</td>
+													<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+												</tr>
+												<tr class="repeater">
+													<td class="handle"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-handle" /></svg></td>
+													<td>
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-type" class="form-input-heading">Type of Product</label>
+																	<div class="form-input-select form-input-field">
+																		<select name="input-product-type" id="input-product-type" class="input">
+																			<option>Regular</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-category" class="form-input-heading">Category</label>
+																	<div class="form-input-select form-input-field">
+																		<select name="input-product-category" id="input-product-type" class="input">
+																			<option selected disabled>Pilih Kategori</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-name" class="form-input-heading">Name</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-name" class="input">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-code" class="form-input-heading">Code</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-code" class="input">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-dimension" class="form-input-heading">Dimension (L&times;W&times;H in cm)</label>
+																	<div class="form-input-fields">
+																		<div class="form-input-field">
+																			<input type="text" id="input-product-dimension-length" class="input" placeholder="Length">
+																		</div>
+																		<div class="form-input-field">
+																			<input type="text" id="input-product-dimension-width" class="input" placeholder="Width">
+																		</div>
+																		<div class="form-input-field">
+																			<input type="text" id="input-product-dimension-height" class="input" placeholder="Height">
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-weight" class="form-input-heading">Weight (gram)</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-weight" class="input">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-price-sell" class="form-input-heading">Harga Jual</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-price-sell" class="input">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-price-retail" class="form-input-heading">Harga Retail</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-price-retail" class="input">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-group-item">
+																<div class="form-input js-form-input">
+																	<label for="input-product-moq" class="form-input-heading">Material of Quantity (MOQ)</label>
+																	<div class="form-input-field">
+																		<input type="text" id="input-product-moq" class="input">
+																	</div>
+																</div>
+															</div>
+															<div class="form-group-item">
+																<div class="form-file js-form-file">
+																	<label for="input-product-los" class="form-file-heading">Letter of Support (LOS)</label>
+																	<div class="form-file-field">
+																		<input type="file" name="input-product-los" id="input-product-los" class="input" data-multiple-placeholder="{count} files selected" multiple>
+																		<label for="input-product-los" class="label"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-image">
+															<label class="form-image-heading">Product Picture</label>
+															<div class="form-image-field">
+																<a href="#" class="link link-media"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-camera-add" /></svg> Upload</a>
+															</div>
+														</div>
+													</td>
+													<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+												</tr>
+											</tbody>
+										</table>
+										<p class="form-repeater-alert">Maksimal 5 baris</p>
 									</fieldset>
 									<fieldset class="form-repeater js-form-repeater" data-repeater-max="5">
 										<legend class="legend">Notes</legend>
@@ -299,7 +430,21 @@
 									</fieldset>
 									<div class="form-submit form-submit-right">
 										<a href="vendor-proposal-new-preview.html" class="button button-gray">Preview</a>
-										<button class="button">Submit Proposal</button>
+										<a href="#popup-submit" class="button js-popup-modal">Submit Proposal</a>
+										<div id="popup-submit" class="popup-inline popup-inline-small mfp-hide">
+											<div class="popup-inline-head">
+												<h4 class="heading">Submit Proposal</h4>
+											</div>
+											<div class="popup-inline-body">
+												<p>Pastikan proposal yang Anda kirim sudah terisi dengan benar. Klik tombol <strong>Submit Proposal</strong> untuk mengirimkan proposal ini.</p>
+											</div>
+											<div class="popup-inline-foot">
+												<div class="form-submit form-submit-right">
+													<button class="button button-gray js-popup-close">Cancel</button>
+													<button class="button">Submit Proposal</button>
+												</div>
+											</div>
+										</div>
 									</div>
 								</section>
 							</div>
