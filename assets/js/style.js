@@ -90,7 +90,7 @@
 	   data-tab-duration="[second]" -> how long is tab animation if tab method is auto
 	*/
 	const tabFunction = function() {
-		const $tabs = document.querySelectorAll('.js-tab');
+		const $tabs = document.querySelectorAll('.js-tab-link');
 
 		function tabInit() {
 			const $tabTargets = document.querySelectorAll('.js-tab-target'),
@@ -124,7 +124,7 @@
 					$tabTargetGroup = document.querySelectorAll(`.js-tab-target[data-tab-group="${$tabTarget.dataset.tabGroup}"]`),
 					tabType = $this.dataset.tabType || 'tab',
 					tabTarget = $this.hash.substring(1),
-					tabDuration = $this.dataset.tabDuration || 0.2,
+					tabDuration = $this.dataset.tabDuration || 0,
 					tabScrollTarget = $this.dataset.scrollTarget;
 
 				if (!$tabTarget.classList.contains('is-tabbed')) {
@@ -136,9 +136,9 @@
 						}
 					});
 
-					TweenMax.to($tabTargetGroup, closeDuration, { display: 'none', height: 0, overflow: 'hidden', autoAlpha: 0, onComplete:
+					TweenMax.to($tabTargetGroup, closeDuration, { display: 'none', overflow: 'hidden', autoAlpha: 0, onComplete:
 					function() {
-						animate.slideDown($tabTarget, tabDuration);
+						animate.fadeIn($tabTarget, tabDuration);
 					}});
 					$tabGroup.forEach(element => element.classList.remove('is-tabbed'));
 					$this.classList.add('is-tabbed');
@@ -147,7 +147,7 @@
 					if (tabScrollTarget) {
 						setTimeout(function() {
 							scrollTo(event, $this);
-						}, closeDuration + tabDuration);
+						}, (closeDuration + tabDuration) * 1000);
 					}
 
 					if (window.history && history.pushState) {

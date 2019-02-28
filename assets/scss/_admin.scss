@@ -9,12 +9,30 @@
 			box-shadow: $box-shadow-300;
 			display: flex;
 			justify-content: space-between;
-			padding: 16px 48px;
+			padding: 12px 48px;
 		}
 
 		.admin-page-content {
 			flex: 1 1 0;
 			padding: 48px;
+
+			.section {
+				margin-bottom: 48px;
+
+				&.section-head {
+					margin-bottom: 32px;
+				}
+
+				&.section-break {
+					border-bottom: 1px solid $color-border;
+					margin-bottom: 32px;
+					padding-bottom: 32px;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		.admin-page-footer {
@@ -36,10 +54,12 @@
 }
 
 .admin-sidebar {
+	position: sticky;
+	top: 0;
 
 	@at-root {
 		.admin-sidebar-logo {
-			margin: 24px 24px 48px;
+			padding: 24px;
 		}
 
 		.admin-sidebar-nav {
@@ -69,6 +89,7 @@
 		.admin-table-search {
 			flex: 0 1 50%;
 			margin-left: auto;
+			max-width: 400px;
 		}
 
 		.admin-table-summary {

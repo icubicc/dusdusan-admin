@@ -58,7 +58,7 @@ img {
 }
 
 ol, ul, dl,
-p, address, blockquote, figure, pre, table {
+p, address, blockquote, figure, pre {
 	margin: 0 0 24px;
 
 	&:last-child {
@@ -298,7 +298,7 @@ textarea {
 	box-shadow: none;
 	line-height: inherit;
 	max-width: 100%;
-	padding: 8px;
+	padding: 7px 8px;
 	transition: all 0.2s ease-out;
 	vertical-align: middle;
 
@@ -348,8 +348,12 @@ table {
 	border-style: hidden;
 	border-radius: 4px;
 	box-shadow: 0 0 0 2px $color-border;
-	margin: 2px;
+	margin: 2px 2px 24px;
 	width: calc(100% - 2px * 2);
+
+	&:last-child {
+		margin-bottom: 2px;
+	}
 
 	caption {
 		color: $color-text-light;

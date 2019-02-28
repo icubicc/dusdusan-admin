@@ -2,13 +2,13 @@
 
 	@at-root {
 		.stat-grid-items {
-			@include column-items(3, 12px);
+			@include flex-flow(0px, 320px, 8px);
 		}
 
 		.stat-grid-item {
 			background-color: $white;
 			border: 1px solid $color-border;
-			border-radius: 8px;
+			border-radius: 4px;
 			box-shadow: $box-shadow-200;
 			padding: 24px;
 		}

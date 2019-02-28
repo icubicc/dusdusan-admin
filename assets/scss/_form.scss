@@ -1,3 +1,7 @@
+.form-horizontal {
+	@include flex-flow(0px, 200px, 8px);
+}
+
 .form-vertical {
 
 	.input,
@@ -303,7 +307,6 @@
 				background-color: $color-600;
 				cursor: pointer;
 				margin-right: 4px;
-				padding: 5px 12px;
 
 				&:hover,
 				&:focus {

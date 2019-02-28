@@ -169,3 +169,32 @@
 		border: none;
 	}
 }
+
+.table-filter {
+	display: inline-block;
+	position: relative;
+
+	@at-root {
+		.table-filter-toggle {
+			color: $color-text-lighter;
+			transition: all 0.2s ease-out;
+
+			&.is-toggled {
+				color: $color-one-500;
+			}
+		}
+
+		.table-filter-list {
+			background-color: $white;
+			border: 1px solid $color-border;
+			box-shadow: $box-shadow-200;
+			display: none;
+			list-style: none;
+			margin: 4px 0 0;
+			padding: 8px;
+			position: absolute;
+			right: 0;
+			top: 100%;
+		}
+	}
+}
