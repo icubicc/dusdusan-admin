@@ -2,29 +2,31 @@
 
 	@at-root {
 		.stat-grid-items {
-			@include flex-flow(0px, 320px, 8px);
+			@include flex-flow(0px, 256px, 8px);
 		}
 
 		.stat-grid-item {
 			background-color: $white;
-			border: 1px solid $color-border;
+			border: 1px solid $color-border-light;
 			border-radius: 4px;
-			box-shadow: $box-shadow-200;
-			padding: 24px;
+			overflow: hidden;
 		}
 
 		.stat-grid-meta {
+			padding: 20px 16px 16px;
 
 			.row {
 				margin-bottom: 0;
 			}
 
 			.label {
-				@include font-size-400;
+				@include font-size-h6;
+				margin-bottom: 2px;
 				text-transform: uppercase;
 			}
 
 			.date {
+				@include font-size-400;
 				color: $color-text-light;
 			}
 
@@ -34,12 +36,19 @@
 		}
 
 		.stat-grid-summary {
-			border-top: 1px solid $color-border;
-			margin-top: 16px;
-			padding-top: 16px;
+			background-color: $color-100;
+			padding: 8px 16px;
+
+			&.stat-grid-summary-negative {
+				background-color: $color-alert-200;
+			}
+
+			&.stat-grid-summary-positive {
+				background-color: $color-success-200;
+			}
 
 			.row {
-				@include font-size-400;
+				@include font-size-300;
 
 				.icon {
 					fill: $color-text-lighter;

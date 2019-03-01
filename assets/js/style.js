@@ -1,7 +1,7 @@
 /* This file extends the limit of style.css
  * Style related scripts including polyfill should be written here
  */
-/* global window document history MouseEvent getParameterByName hasChild svg4everybody Stickyfill fluidvids TweenMax ScrollMagic */
+/* global window document history MouseEvent getParameterByName hasChild svg4everybody Stickyfill fluidvids TweenMax ScrollMagic Choices dragula */
 
 (function() {
 
@@ -45,7 +45,7 @@
 		slideUp: (element, duration, delay = 0) => {
 			TweenMax.to(element, duration, { display: 'none', overflow: 'hidden', autoAlpha: 0, height: 0, delay: delay });
 		}
-	}
+	};
 	const animate = Object.create(Animate);
 
 	// scroll to targeted id
@@ -651,7 +651,7 @@
 		});
 
 		// dragula on repeater
-		$draggable = document.querySelectorAll('.js-form-repeater .repeaters');
+		const $draggable = document.querySelectorAll('.js-form-repeater .repeaters');
 
 		$draggable.forEach(element => {
 			dragula([element], {

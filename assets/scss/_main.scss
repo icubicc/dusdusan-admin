@@ -2,13 +2,6 @@
 	flex: 1 1 auto;
 	min-width: 0;
 	width: 100%;
-
-	.section {
-
-		&:not(:last-child) {
-			margin-bottom: 48px;
-		}
-	}
 }
 
 .main-aside {

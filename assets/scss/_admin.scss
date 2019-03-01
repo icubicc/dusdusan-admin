@@ -6,10 +6,22 @@
 	@at-root {
 		.admin-page-header {
 			align-items: center;
+			background-color: $white;
 			box-shadow: $box-shadow-300;
 			display: flex;
 			justify-content: space-between;
 			padding: 12px 48px;
+			position: sticky;
+			top: 0;
+			z-index: 2;
+
+			.section {
+				flex: 0 1 auto;
+
+				&.section-large {
+					flex: 1 1 0;
+				}
+			}
 		}
 
 		.admin-page-content {
@@ -63,7 +75,7 @@
 		}
 
 		.admin-sidebar-nav {
-			margin: 24px 0;
+			padding: 24px 0;
 		}
 	}
 }
@@ -180,6 +192,43 @@
 					background-color: rgba($white, 0.12);
 					font-weight: 700;
 				}
+			}
+		}
+	}
+}
+
+.admin-switcher {
+
+	@at-root {
+		.admin-switcher-options {
+			background: $color-200;
+			border-radius: 4px;
+			display: flex;
+			overflow: hidden;
+		}
+
+		.admin-switcher-option {
+			flex: 1 1 50%;
+
+			.input {
+				display: none;
+
+				&:checked {
+
+					+ .label {
+						background-color: $color-one-500;
+						color: $white;
+					}
+				}
+			}
+
+			.label {
+				@include font-size-400;
+				color: $color-text-light;
+				display: block;
+				min-width: 40px;
+				padding: 4px 8px;
+				text-align: center;
 			}
 		}
 	}
