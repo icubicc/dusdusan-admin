@@ -511,3 +511,48 @@
 		margin: 4px;
 	}
 }
+
+.form-image {
+
+	@at-root {
+		.form-image-heading {
+			display: block;
+			margin-bottom: 6px;
+		}
+
+		.form-image-field {
+
+			.link {
+
+				> * {
+					pointer-events: none;
+				}
+			}
+		}
+	}
+}
+
+.form-uploader {
+
+	@at-root {
+		.form-uploader-head {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 24px;
+
+			.heading {
+				@include font-size-h4;
+				margin-bottom: 0;
+			}
+		}
+
+		.form-uploader-loader {
+			margin-top: 16px;
+
+			.button {
+				width: 100%;
+			}
+		}
+	}
+}

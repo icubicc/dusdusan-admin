@@ -15,16 +15,27 @@ if ($choice.length) {
 	});
 }
 
+// initialize Fine Uploader
+var $uploader = document.querySelectorAll('.js-uploader');
+
+if ($uploader.length) {
+	$uploader.forEach(el => {
+		new qq.FineUploader({
+			element: el
+		});
+	});
+}
+
 jQuery(document).ready(function($) {
 
 	// initialize magnificPopup
-	$('.js-popup-inline').magnificPopup({
+	var $popupInline = $('.js-popup-inline').magnificPopup({
 		type: 'inline',
 		mainClass: 'mfp-animation',
 		removalDelay: 200
 	});
 
-	$('.js-popup-modal').magnificPopup({
+	var $popupModal = $('.js-popup-modal').magnificPopup({
 		type: 'inline',
 		mainClass: 'mfp-animation',
 		modal: true,
@@ -34,6 +45,16 @@ jQuery(document).ready(function($) {
 	$(document).on('click', '.js-popup-close', function (event) {
 		event.preventDefault();
 		$.magnificPopup.close();
+	});
+
+	// magnific on repeater
+	$('.js-form-repeater').on('click', function(event) {
+		if (event.target && event.target.matches('.js-popup-inline')) {
+			$popupInline.magnificPopup('open');
+		} else if (event.target && event.target.matches('.js-popup-modal')) {
+			$popupModal.magnificPopup('open');
+		}
+		event.preventDefault();
 	});
 
 });
