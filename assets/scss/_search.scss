@@ -46,13 +46,14 @@
 				border: 1px solid $color-border;
 				box-shadow: $box-shadow-300;
 				display: none;
-				padding: 8px;
+				padding: 4px;
 			}
 
 			.item {
 
-				&:not(:last-child) {
-					margin-bottom: 4px;
+				.label {
+					display: block;
+					padding: 4px 8px;
 				}
 			}
 		}

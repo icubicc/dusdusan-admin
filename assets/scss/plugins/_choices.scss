@@ -30,10 +30,6 @@
   cursor: pointer;
 }
 
-.choices[data-type*="select-one"] .choices__inner {
-  padding-bottom: 4px;
-}
-
 .choices[data-type*="select-one"] .choices__input {
   border-color: transparent;
   border-bottom: 1px solid #DDDDDD;
@@ -70,26 +66,15 @@
 
 .choices[data-type*="select-one"]:after {
   content: "";
-  height: 0;
-  width: 0;
-  border-style: solid;
-  border-color: #333333 transparent transparent transparent;
-  border-width: 5px;
-  position: absolute;
-  right: 11.5px;
-  top: 50%;
-  margin-top: -2.5px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOEY4RjhGIiBkPSJtNy40MSA3Ljg0IDQuNTkgNC41OCA0LjU5LTQuNTggMS40MSAxLjQxLTYgNi02LTZ6Ii8+PC9zdmc+);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
   pointer-events: none;
-}
-
-.choices[data-type*="select-one"].is-open:after {
-  border-color: transparent transparent #333333 transparent;
-  margin-top: -7.5px;
-}
-
-.choices[data-type*="select-one"][dir="rtl"]:after {
-  left: 11.5px;
-  right: auto;
+  position: absolute;
+  right: 1px;
+  top: 0;
+  width: 32px;
 }
 
 .choices[data-type*="select-one"][dir="rtl"] .choices__button {
@@ -133,7 +118,7 @@
   vertical-align: top;
   width: 100%;
   background-color: $white;
-  padding: 4px 8px;
+  padding: 3px 4px;
   border: 1px solid $color-border;
   border-radius: 3px;
   min-height: 40px;
@@ -142,7 +127,7 @@
 
 .is-focused .choices__inner,
 .is-open .choices__inner {
-  border-color: #b7b7b7;
+  border-color: $color-one-500;
 }
 
 .is-open .choices__inner {
@@ -160,7 +145,7 @@
 }
 
 .choices__list--single {
-  display: inline-block;
+  display: block;
   padding: 4px 16px 4px 4px;
   width: 100%;
 }
@@ -171,6 +156,7 @@
 }
 
 .choices__list--single .choices__item {
+  @include ellipsis;
   width: 100%;
 }
 
@@ -232,7 +218,7 @@
 }
 
 .is-open .choices__list--dropdown {
-  border-color: #b7b7b7;
+  border-color: $color-one-500;
 }
 
 .is-flipped .choices__list--dropdown {
@@ -252,6 +238,7 @@
 }
 
 .choices__list--dropdown .choices__item {
+  @include ellipsis;
   position: relative;
   padding: 10px;
   font-size: 14px;
@@ -263,7 +250,7 @@
 
 @media (min-width: 640px) {
   .choices__list--dropdown .choices__item--selectable {
-    padding-right: 100px;
+    // padding-right: 100px;
   }
   .choices__list--dropdown .choices__item--selectable:after {
     content: attr(data-select-text);

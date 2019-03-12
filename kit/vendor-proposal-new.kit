@@ -265,10 +265,10 @@
 															</div>
 															<div class="form-group-item">
 																<div class="form-file js-form-file">
-																	<label for="input-product-los" class="form-file-heading">Letter of Support (LOS)</label>
+																	<label data-repeater-for="input-product-los-{timestamp}" class="form-file-heading">Letter of Support (LOS)</label>
 																	<div class="form-file-field">
-																		<input type="file" name="input-product-los" id="input-product-los" class="input" data-multiple-placeholder="{count} files selected" multiple>
-																		<label for="input-product-los" class="label"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
+																		<input type="file" data-repeater-name="input-product-los-{timestamp}" data-repeater-id="input-product-los-{timestamp}" class="input" data-multiple-placeholder="{count} files selected" multiple>
+																		<label data-repeater-for="input-product-los-{timestamp}" class="label"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
 																	</div>
 																</div>
 															</div>
@@ -380,18 +380,25 @@
 															</div>
 															<div class="form-group-item">
 																<div class="form-file js-form-file">
-																	<label for="input-product-los" class="form-file-heading">Letter of Support (LOS)</label>
+																	<label for="input-product-los-2" class="form-file-heading">Letter of Support (LOS)</label>
 																	<div class="form-file-field">
-																		<input type="file" name="input-product-los" id="input-product-los" class="input" data-multiple-placeholder="{count} files selected" multiple>
-																		<label for="input-product-los" class="label"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
+																		<input type="file" name="input-product-los-2" id="input-product-los-2" class="input" data-multiple-placeholder="{count} files selected" multiple>
+																		<label for="input-product-los-2" class="label"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
 																	</div>
 																</div>
 															</div>
 														</div>
 														<div class="form-image">
 															<label class="form-image-heading">Product Picture</label>
-															<div class="form-image-field">
-																<a href="#popup-media-uploader" class="link link-media js-popup-inline"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-camera-add" /></svg> Upload</a>
+															<div class="form-image-fields">
+																<div class="form-image-field">
+																	<a href="#popup-media-uploader" class="link link-media js-popup-inline"><img class="image" src="http://placehold.it/240x240/eeeeee/111111"></a>
+																	<a href="#" class="edit">Edit</a>
+																	<a href="#" class="delete"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-close" /></svg></a>
+																</div>
+																<div class="form-image-field">
+																	<a href="#popup-media-uploader" class="link link-upload js-popup-inline"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-camera-add" /></svg> Upload</a>
+																</div>
 															</div>
 														</div>
 													</td>

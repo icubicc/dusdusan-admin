@@ -486,6 +486,16 @@
 						input.parentNode.classList.add('is-filled');
 					}
 				});
+
+				// pikaday support
+				const $inputDate = element.querySelector('.form-input-date');
+
+				if ($inputDate) {
+					new Pikaday({
+						field: $inputDate.querySelector('.input'),
+						format: 'DD[-]MM[-]YYYY'
+					});
+				}
 			});
 
 		});
@@ -576,6 +586,8 @@
 					nameSuffix = repeater.dataset.repeaterId.split(regex);
 				} else if (type === 'name') {
 					nameSuffix = repeater.dataset.repeaterName.split(regex);
+				} else if (type === 'for') {
+					nameSuffix = repeater.dataset.repeaterFor.split(regex);
 				}
 
 				nameSuffix.forEach(function(element, n) {
@@ -592,6 +604,7 @@
 				var $repeaterNew = $repeaterSource.cloneNode(true),
 					$repeaterId = $repeaterNew.querySelectorAll('[data-repeater-id]'),
 					$repeaterName = $repeaterNew.querySelectorAll('[data-repeater-name]'),
+					$repeaterFor = $repeaterNew.querySelectorAll('[data-repeater-for]'),
 					timestamp = Date.now();
 
 				$repeaterNew.classList.remove('repeater-source');
@@ -609,13 +622,20 @@
 					});
 				}
 
+				if ($repeaterFor) {
+					$repeaterFor.forEach(element => {
+						generateID(element, 'for');
+					});
+				}
+
 				// add support to choices.js
 				const $repeaterChoice = $repeaterNew.querySelectorAll('.js-choice');
 
 				if ($repeaterChoice.length) {
 					$repeaterChoice.forEach(element => {
 						new Choices(element, {
-							shouldSort: false
+							shouldSort: false,
+							itemSelectText: false
 						});
 					});
 				}

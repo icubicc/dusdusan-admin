@@ -191,10 +191,18 @@
 			display: none;
 			list-style: none;
 			margin: 4px 0 0;
-			padding: 8px;
+			padding: 4px;
 			position: absolute;
 			right: 0;
 			top: 100%;
+
+			.filter {
+
+				.label {
+					display: block;
+					padding: 4px 8px;
+				}
+			}
 		}
 	}
 }

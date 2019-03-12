@@ -6,6 +6,11 @@
 		margin-bottom: 32px;
 	}
 
+	&.proposal-card-popup {
+		border: 0;
+		padding: 0;
+	}
+
 	@at-root {
 		.proposal-card-head {
 			@include font-size-400;

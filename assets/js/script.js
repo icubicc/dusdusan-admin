@@ -9,7 +9,8 @@ if ($choice.length) {
 	$choice.forEach(element => {
 		if (!(element.offsetHeight === 0 && element.offsetWidth === 0)) {
 			new Choices(element, {
-				shouldSort: false
+				shouldSort: false,
+				itemSelectText: ''
 			});
 		}
 	});
@@ -54,7 +55,6 @@ jQuery(document).ready(function($) {
 		} else if (event.target && event.target.matches('.js-popup-modal')) {
 			$popupModal.magnificPopup('open');
 		}
-		event.preventDefault();
 	});
 
 });
